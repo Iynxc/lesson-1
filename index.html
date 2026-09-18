@@ -1,17 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+
+    <title>System Breach</title>
+<link rel="shortcut icon" href="/lesson-1/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
 
-    <h1>Hello hacked</h1>
-  
+    <main class="screen">
+
+        <div class="grid"></div>
+        <div class="scan"></div>
+        <div class="noise"></div>
+
+        <!-- Верхняя панель -->
+        <header class="topbar">
+
+            <div class="logo">
+                SYSTEM://CORE
+            </div>
+
+            <div class="connection">
+                <span class="connection__dot"></span>
+                LIVE CONNECTION
+            </div>
+
+        </header>
+
+
+        <!-- Фоновый код -->
+        <div class="matrix" id="matrix"></div>
+
+
+        <!-- Терминал -->
+        <section class="window window--terminal">
+
+            <div class="window__header">
+
+                <span>terminal.exe</span>
+
+                <div class="window__buttons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="terminal" id="terminal"></div>
+
+        </section>
+
+
+        <!-- Файлы -->
+        <section class="window window--files">
+
+            <div class="window__header">
+
+                <span>FILE_SYSTEM</span>
+
+                <div class="window__buttons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="files">
+
+                <div class="file">
+                    <span>▣</span>
+                    system_core.dat
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    administrator.cfg
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    security_config.sys
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    encrypted_data.bin
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    user_database.db
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    network_map.dat
+                </div>
+
+                <div class="file">
+                    <span>▣</span>
+                    access_tokens.tmp
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Камера -->
+        <section class="window window--camera">
+
+            <div class="window__header">
+
+                <span>DEVICE_CAMERA</span>
+
+                <div class="window__buttons">
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+            <div class="camera">
+
+                <div class="camera__screen">
+
+                    <div class="camera__target"></div>
+
+                    <span>CAMERA ACCESS</span>
+
+                </div>
+
+                <p>
+                    SIGNAL: ACTIVE
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Сеть -->
+        <section class="window window--network">
+
+            <div class="window__header">
+
+                <span>NETWORK_MAP</span>
+
+            </div>
+
+            <div class="network">
+
+                <div class="network__line network__line--1"></div>
+                <div class="network__line network__line--2"></div>
+                <div class="network__line network__line--3"></div>
+                <div class="network__line network__line--4"></div>
+
+                <span class="node node--1"></span>
+                <span class="node node--2"></span>
+                <span class="node node--3"></span>
+                <span class="node node--4"></span>
+                <span class="node node--5"></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- Предупреждение -->
+        <div class="warning">
+
+            <strong>
+                ⚠ SECURITY BREACH
+            </strong>
+
+            <span>
+                UNAUTHORIZED ACCESS DETECTED
+            </span>
+
+        </div>
+
+
+        <!-- Центральная надпись -->
+        <section class="center">
+
+            <h1 id="mainText">
+                ACCESSING
+            </h1>
+
+            <p id="subText">
+                SYSTEM SECURITY: 100%
+            </p>
+
+        </section>
+
+
+        <!-- Нижняя панель -->
+        <footer class="bottom">
+
+            <span>
+                CONNECTION: ENCRYPTED
+            </span>
+
+            <span id="progress">
+                BREACH: 0%
+            </span>
+
+            <span>
+                NODE: 192.168.X.X
+            </span>
+
+        </footer>
+
+
+        <!-- Вторая фаза -->
+        <section class="override" id="override">
+
+            <div class="override__content">
+
+                <h2>
+                    SYSTEM OVERRIDDEN
+                </h2>
+
+                <p>
+                    SECURITY CONTROL LOST
+                </p>
+
+                <div class="override__logs" id="overrideLogs"></div>
+
+                <div class="core">
+
+                    <div class="core__progress" id="coreProgress"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Финальный экран -->
+        <section class="final" id="final">
+
+            <h2>
+                COMPROMISED
+            </h2>
+
+            <p>
+                SYSTEM CONTROL : 100%
+            </p>
+
+        </section>
+
+    </main>
+
+    <audio id="glitchSound" src="./sounds/glitch.mp3" preload="auto"></audio>
+    <audio id="scanSound" src="./sounds/scan.mp3" preload="auto"></audio>
+    <audio id="warningSound" src="./sounds/warning.mp3" preload="auto"></audio>
+    <audio id="voiceSound" src="./sounds/voice.mp3" preload="auto"></audio>
+
+    <script src="./main.js"></script>
 
 
 </body>
